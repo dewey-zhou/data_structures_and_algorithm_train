@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //快慢指针
+    // function ListNode(val) {
+    //         this.val = val;
+    //         this.next = null;
+    //      }
+    // function hasCycle(head){
+    //     if(!head || !head.next){
+    //         return false
+    //     }
+    //     let slow =head,fast = head.next
+    //     while(slow!=fast){
+    //         if(!fast ||!fast.next){
+    //             return false
+    //         }
+    //         slow=slow.next
+    //         fast=fast.next.next
+    //     }
+    //     return true
+    // }
+    //污染指针
+    function ListNode(val) {
+        while(head){
+            if(head.val =='a'){
+                return true
+            }else{
+                head.val = 'a'
+            }
+            head = head.next
+        }
+        return false
+    }
+
+    </script>
+   
+</body>
+</html>

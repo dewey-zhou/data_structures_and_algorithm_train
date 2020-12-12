@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var maxArea = function(height) {
+    //暴力遍历 O(n^2)
+    // let max = 0
+    //     //规定i在左，j在右
+    // for(let i =0;i<height.length-1;i++){
+    //     for(let j =i+1;j<height.length;j++){
+    //         let area = (j-i)*Math.min(height[i],height[j])
+    //         max=Math.max(max,area)
+    //     } 
+    // }
+    //双指针法，左右边界，向中间收敛 O(N)
+    let max = 0
+    for(let i=0, j=height.length-1;i<j;){
+        let minHeight = height[i]<height[j]?height[i++]:height[j--]
+        max = Math.max(max,((j-i+1)*minHeight))
+    }
+    return max
+}
+console.log(maxArea([1,8,6,2,5,4,8,3,7]))
+    </script>
+</body>
+</html>
