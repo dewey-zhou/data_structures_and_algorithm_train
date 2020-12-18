@@ -16,3 +16,4 @@ MinsStack.prototype.top =function(){
 MinsStack.prototype.getMin = function(){
     return this.min_stack[this.min_stack.length-1]
 }
+
